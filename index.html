@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tip Calculator</title>
+	<script>
+		var calTip = function() {
+			var cost = +document.getElementById("costInput").value;  
+			var rate = +document.getElementById("rateInput").value; 
+			var total = (cost * (rate/100)).toFixed(2);
+			document.getElementById("output").innerHTML = "Tip Amount: $" + total;
+		};		
+	</script> 
+</head>
+<body>
+	<form>
+		<label>Total Cost($): 
+			<input type="number" id="costInput">
+		</label>
+		<label>Tip Rate(%): 
+			<input type="number" id="rateInput">
+		</label>
+		<input type="button" id="cal" value="Tip" onclick="calTip()" style = "width:50px; height:25px">		
+	</form>
+	<p>
+		<div id="output"></div>
+	</p>	
+</body>
+</html>
